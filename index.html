@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Govt. ITI Madhubani Sadar | राजकीय औद्योगिक प्रशिक्षण संस्थान, मधुबनी सदर</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0B3B60;
+    --navy-deep:#08283F;
+    --saffron:#DE7C1C;
+    --saffron-soft:#F4A94B;
+    --green:#0E8A4B;
+    --paper:#FBFAF7;
+    --card:#FFFFFF;
+    --ink:#1F2733;
+    --muted:#5B6572;
+    --line: #E4E1D8;
+    --line-dark: rgba(255,255,255,0.16);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Noto Sans', sans-serif;
+    line-height:1.6;
+  }
+  h1,h2,h3,.display{font-family:'Poppins', sans-serif; font-weight:700; letter-spacing:-0.01em;}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  :focus-visible{outline:2px solid var(--saffron); outline-offset:3px;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 26px;}
+  ul{list-style:none;}
+
+  /* Tricolor strip */
+  .tricolor{height:5px; display:flex;}
+  .tricolor span{flex:1;}
+  .tricolor .s1{background:#FF9933;}
+  .tricolor .s2{background:#FFFFFF; border-top:1px solid #eee; border-bottom:1px solid #eee;}
+  .tricolor .s3{background:#128807;}
+
+  /* ---------- NAV ---------- */
+  .nav{position:sticky; top:0; z-index:60; background:rgba(251,250,247,0.94); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
+  .nav .wrap{display:flex; align-items:center; justify-content:space-between; height:74px; gap:18px;}
+  .brand{display:flex; align-items:center; gap:12px;}
+  .seal{
+    width:46px; height:46px; border-radius:50%; background:var(--navy);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+    border:2px solid var(--saffron); overflow:hidden;
+  }
+  .seal .logo-img{width:100%; height:100%; object-fit:cover;}
+  .seal svg{width:26px; height:26px;}
+  .brand-text .en{font-size:0.98rem; font-weight:700; line-height:1.2;}
+  .brand-text .hi{font-size:0.8rem; color:var(--muted);}
+  .nav-links{display:flex; gap:26px; font-size:0.88rem; font-weight:600; flex-wrap:wrap;}
+  .nav-links a{opacity:0.78; transition:opacity .2s; padding:6px 0; border-bottom:2px solid transparent;}
+  .nav-links a:hover{opacity:1; border-color:var(--saffron);}
+  .nav-cta{background:var(--navy); color:#fff; padding:10px 18px; border-radius:4px; font-size:0.85rem; font-weight:700; white-space:nowrap;}
+
+  /* ---------- HERO ---------- */
+  .hero{background:linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%); color:#fff; position:relative; overflow:hidden;}
+  .hero::before{
+    content:""; position:absolute; inset:0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+    background-size:22px 22px; opacity:0.5;
+  }
+  .hero-inner{position:relative; z-index:2; padding:72px 0 56px; text-align:center; max-width:820px; margin:0 auto;}
+  .gov-tag{font-size:0.8rem; letter-spacing:0.06em; color:var(--saffron-soft); font-weight:600; text-transform:uppercase; margin-bottom:18px;}
+  .hero h1{font-size:clamp(1.7rem, 3.6vw, 2.5rem); line-height:1.3; margin-bottom:10px;}
+  .hero .hi-name{font-size:clamp(1.1rem, 2.4vw, 1.4rem); color:#CFE0EE; margin-bottom:22px; font-weight:500;}
+  .hero p{color:#C7D6E4; font-size:1rem; max-width:620px; margin:0 auto 32px;}
+  .hero-ctas{display:flex; gap:14px; justify-content:center; flex-wrap:wrap;}
+  .btn-primary{background:var(--saffron); color:#fff; font-weight:700; padding:13px 26px; border-radius:4px; font-size:0.94rem; transition:background .2s;}
+  .btn-primary:hover{background:#C56A12;}
+  .btn-ghost{border:1px solid rgba(255,255,255,0.35); padding:13px 24px; border-radius:4px; font-size:0.94rem; font-weight:600; transition:border-color .2s, background .2s;}
+  .btn-ghost:hover{border-color:#fff; background:rgba(255,255,255,0.06);}
+
+  .stat-strip{position:relative; z-index:2; background:rgba(255,255,255,0.06); border-top:1px solid var(--line-dark);}
+  .stat-strip .wrap{display:flex; justify-content:space-around; flex-wrap:wrap; padding:22px 0;}
+  .stat{text-align:center; padding:6px 18px;}
+  .stat .n{font-family:'Poppins'; font-size:1.5rem; font-weight:700; color:var(--saffron-soft);}
+  .stat .l{font-size:0.76rem; color:#B9CADA; margin-top:2px;}
+
+  /* ---------- SECTION SHARED ---------- */
+  section{padding:76px 0;}
+  .sec-head{max-width:680px; margin:0 auto 46px; text-align:center;}
+  .sec-eyebrow{font-size:0.78rem; font-weight:700; color:var(--saffron); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:12px; display:block;}
+  .sec-head h2{font-size:clamp(1.5rem,2.8vw,2.05rem); margin-bottom:12px;}
+  .sec-head p{color:var(--muted); font-size:0.98rem;}
+  .edit-note{
+    display:inline-block; margin-top:10px; font-size:0.74rem; background:#FFF3E2; color:#9A5B0E;
+    border:1px dashed #E3A25B; padding:4px 10px; border-radius:20px;
+  }
+
+  /* ---------- TRADES & INSTRUCTORS ---------- */
+  .trades{background:var(--card); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .trade-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:22px;}
+  .trade-card{
+    border:1px solid var(--line); border-radius:8px; overflow:hidden; background:var(--paper);
+    display:flex; flex-direction:column;
+  }
+  .trade-head{background:var(--navy); color:#fff; padding:16px 18px;}
+  .trade-head .tname{font-family:'Poppins'; font-weight:700; font-size:1.02rem;}
+  .trade-head .tdur{font-size:0.76rem; color:#B9CADA; margin-top:2px;}
+  .staff-row{padding:16px 18px; display:flex; gap:14px; border-top:1px solid var(--line);}
+  .staff-row:first-of-type{border-top:none;}
+  .staff-tag{font-size:0.66rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--saffron); font-weight:700; margin-bottom:4px; display:block;}
+  .avatar{
+    width:56px; height:56px; border-radius:50%; background:#E7ECF1; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center; color:var(--navy); font-weight:700;
+    border:2px solid var(--line); position:relative; overflow:hidden;
+  }
+  .avatar img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; border-radius:50%;}
+  .trade-info .iname{font-weight:700; font-size:0.96rem;}
+  .trade-info .irole{font-size:0.78rem; color:var(--muted); margin-bottom:6px;}
+  .trade-info .idesc{font-size:0.82rem; color:var(--muted);}
+  .trade-projects{padding:16px 18px; border-top:1px solid var(--line); background:#F5F3ED;}
+  .trade-projects h4{font-size:0.8rem; font-weight:700; color:var(--navy); margin-bottom:12px;}
+  .project-strip{display:flex; gap:12px; overflow-x:auto; padding-bottom:2px;}
+  .project-item{flex:0 0 108px; cursor:pointer;}
+  .project-item .pimg{
+    width:108px; height:80px; border-radius:6px; overflow:hidden; position:relative;
+    background:linear-gradient(135deg,#E7ECF1,#DCE4EC); border:1px solid var(--line);
+  }
+  .project-item .pimg img{width:100%; height:100%; object-fit:cover; display:block;}
+  .project-item .pimg .missing{
+    position:absolute; inset:0; display:none; align-items:center; justify-content:center;
+    font-size:0.62rem; text-align:center; color:var(--muted); padding:6px;
+  }
+  .project-item .pcap{font-size:0.72rem; color:var(--muted); margin-top:6px; text-align:center; line-height:1.3;}
+
+  /* ---------- GROUP ANUDESHAK ---------- */
+  .group-team{background:var(--card); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .group-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  .group-card{
+    border:1px solid var(--line); border-radius:8px; background:var(--paper); padding:22px 18px;
+    text-align:center;
+  }
+  .group-card .avatar{
+    width:76px; height:76px; margin:0 auto 14px; border-radius:50%; background:#E7ECF1;
+    display:flex; align-items:center; justify-content:center; color:var(--navy); font-weight:700; font-size:1.1rem;
+    border:2px solid var(--line); position:relative; overflow:hidden;
+  }
+  .group-card .avatar img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
+  .group-card .gname{font-weight:700; font-size:0.96rem; margin-bottom:4px;}
+  .group-card .grole{font-size:0.8rem; color:var(--saffron); font-weight:600; margin-bottom:6px;}
+  .group-card .gdesc{font-size:0.8rem; color:var(--muted);}
+
+  /* ---------- PRINCIPAL DESK ---------- */
+  .principal{background:var(--paper);}
+  .principal-inner{display:grid; grid-template-columns:0.8fr 1.2fr; gap:44px; align-items:center; background:var(--card); border:1px solid var(--line); border-radius:10px; padding:40px; }
+  .principal-photo{
+    aspect-ratio:1/1; border-radius:8px; background:#E7ECF1; border:2px dashed #C7CFD8;
+    position:relative; overflow:hidden; color:var(--muted); font-size:0.85rem;
+  }
+  .principal-photo img{width:100%; height:100%; object-fit:cover; display:block;}
+  .principal-text .sec-eyebrow{text-align:left; margin-bottom:10px;}
+  .principal-text h3{font-size:1.35rem; margin-bottom:4px;}
+  .principal-text .role{color:var(--muted); font-size:0.9rem; margin-bottom:18px;}
+  .principal-text blockquote{
+    font-size:1.02rem; color:var(--ink); border-left:3px solid var(--saffron); padding-left:16px; margin-bottom:18px; font-style:italic;
+  }
+  .principal-text p{font-size:0.92rem; color:var(--muted);}
+
+  /* ---------- GALLERY ---------- */
+  .gallery{background:var(--card); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .gal-tabs{display:flex; justify-content:center; gap:10px; margin-bottom:32px; flex-wrap:wrap;}
+  .gal-tab{padding:8px 18px; border:1px solid var(--line); border-radius:20px; font-size:0.84rem; font-weight:600; cursor:pointer; background:var(--paper);}
+  .gal-tab.active{background:var(--navy); color:#fff; border-color:var(--navy);}
+  .gal-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
+  .gal-item{
+    aspect-ratio:4/3; border-radius:6px; background:linear-gradient(135deg,#E7ECF1,#DCE4EC);
+    display:flex; align-items:center; justify-content:center; color:var(--muted); font-size:0.78rem; text-align:center; padding:10px;
+    border:1px solid var(--line); overflow:hidden; position:relative; cursor:pointer;
+  }
+  .gal-item img, .gal-item video{width:100%; height:100%; object-fit:cover; display:block;}
+  .gal-item .missing{position:absolute; inset:0; display:none; align-items:center; justify-content:center; padding:10px;
+    background:linear-gradient(135deg,#E7ECF1,#DCE4EC); color:var(--muted); font-size:0.76rem; flex-direction:column;}
+  .gal-item.video .play-badge{
+    position:absolute; bottom:8px; left:8px; background:rgba(11,59,96,0.85); color:#fff; font-size:0.68rem;
+    padding:3px 9px; border-radius:12px; display:flex; align-items:center; gap:4px;
+  }
+  .gal-item.video .play-badge::before{content:"▶"; color:var(--saffron-soft); font-size:0.6rem;}
+  .gal-item[data-cat]{transition:opacity .2s, transform .2s;}
+  .gal-item.hide{display:none;}
+
+  /* Lightbox */
+  .lightbox{
+    position:fixed; inset:0; background:rgba(8,20,32,0.92); z-index:100; display:none;
+    align-items:center; justify-content:center; padding:30px;
+  }
+  .lightbox.open{display:flex;}
+  .lightbox-inner{max-width:900px; width:100%;}
+  .lightbox-inner img, .lightbox-inner video{width:100%; max-height:80vh; object-fit:contain; border-radius:6px; background:#000;}
+  .lightbox-close{
+    position:absolute; top:20px; right:26px; color:#fff; font-size:1.8rem; cursor:pointer; line-height:1;
+    background:none; border:none;
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq-table{width:100%; border-collapse:collapse; font-size:0.88rem;}
+  .faq-table th{
+    background:var(--navy); color:#fff; text-align:left; padding:12px 14px; font-weight:600; font-size:0.82rem;
+  }
+  .faq-table td{padding:13px 14px; border-bottom:1px solid var(--line); vertical-align:top; color:var(--ink);}
+  .faq-table tr:nth-child(even) td{background:#F5F3ED;}
+  .faq-wrap-table{overflow-x:auto; border:1px solid var(--line); border-radius:8px;}
+
+  details.faq-item{border:1px solid var(--line); border-radius:8px; background:var(--card); margin-bottom:12px; overflow:hidden;}
+  details.faq-item summary{
+    padding:16px 20px; font-weight:600; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;
+    font-size:0.94rem;
+  }
+  details.faq-item summary::-webkit-details-marker{display:none;}
+  details.faq-item summary::after{content:"+"; font-size:1.3rem; color:var(--saffron); font-weight:700;}
+  details.faq-item[open] summary::after{content:"–";}
+  details.faq-item .faq-a{padding:0 20px 18px; color:var(--muted); font-size:0.88rem;}
+
+  /* ---------- CONTACT / GRIEVANCE ---------- */
+  .contact{background:var(--navy); color:#fff;}
+  .contact .sec-eyebrow{color:var(--saffron-soft);}
+  .contact .sec-head p{color:#C7D6E4;}
+  .contact-grid{display:grid; grid-template-columns:0.8fr 1.2fr; gap:0; background:rgba(255,255,255,0.04); border:1px solid var(--line-dark); border-radius:10px; overflow:hidden;}
+  .contact-info{padding:38px; border-right:1px solid var(--line-dark);}
+  .contact-info h3{font-size:1.1rem; margin-bottom:18px;}
+  .cline{display:flex; gap:12px; font-size:0.88rem; margin-bottom:16px; color:#DCE7EF;}
+  .cline b{color:var(--saffron-soft); min-width:60px; display:inline-block; font-size:0.78rem; text-transform:uppercase;}
+  .grievance-form{padding:38px; display:flex; flex-direction:column; gap:14px;}
+  .field label{font-size:0.76rem; text-transform:uppercase; letter-spacing:0.05em; color:#B9CADA; display:block; margin-bottom:6px; font-weight:600;}
+  .field input, .field select, .field textarea{
+    width:100%; border:1px solid rgba(255,255,255,0.2); background:rgba(255,255,255,0.06);
+    padding:11px 13px; font-family:'Noto Sans'; font-size:0.9rem; border-radius:4px; color:#fff;
+  }
+  .field input::placeholder, .field textarea::placeholder{color:#8CA0B3;}
+  .field textarea{resize:vertical; min-height:90px;}
+  .form-row{display:flex; gap:14px;}
+  .form-row .field{flex:1;}
+  .submit-btn{
+    margin-top:4px; background:var(--saffron); color:#fff; font-weight:700; padding:14px; border-radius:4px;
+    border:none; font-size:0.94rem; cursor:pointer; transition:background .2s;
+  }
+  .submit-btn:hover{background:#C56A12;}
+  .form-note{font-size:0.78rem; color:#9FB6C9;}
+
+  footer{background:var(--navy-deep); color:#9FB0BF; padding:30px 0;}
+  footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:0.8rem;}
+
+  @media (max-width:900px){
+    .nav-links{display:none;}
+    .trade-grid{grid-template-columns:1fr 1fr;}
+    .group-grid{grid-template-columns:1fr 1fr;}
+    .principal-inner{grid-template-columns:1fr;}
+    .gal-grid{grid-template-columns:1fr 1fr;}
+    .contact-grid{grid-template-columns:1fr;}
+    .contact-info{border-right:none; border-bottom:1px solid var(--line-dark);}
+    .form-row{flex-direction:column;}
+  }
+  @media (max-width:560px){
+    .trade-grid{grid-template-columns:1fr;}
+    .group-grid{grid-template-columns:1fr;}
+    .gal-grid{grid-template-columns:1fr 1fr;}
+  }
+</style>
+</head>
+<body>
+
+<div class="tricolor"><span class="s1"></span><span class="s2"></span><span class="s3"></span></div>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="brand">
+      <div class="seal">
+        <img src="media/logo.png" alt="College Logo" class="logo-img"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" style="display:none;"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+      <div class="brand-text">
+        <div class="en">Govt. ITI Madhubani Sadar</div>
+        <div class="hi">राजकीय औद्योगिक प्रशिक्षण संस्थान, मधुबनी सदर</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#trades">ट्रेड व अनुदेशक</a>
+      <a href="#group-anudeshak">ग्रुप अनुदेशक</a>
+      <a href="#common-instructors">सामान्य विषय</a>
+      <a href="#principal">प्राचार्य</a>
+      <a href="#gallery">गैलरी</a>
+      <a href="#faq">जानकारी / FAQ</a>
+      <a href="#contact">शिकायत</a>
+    </div>
+    <a href="#contact" class="nav-cta">Contact Us</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div class="gov-tag">Youth Employment &amp; Skill Development Department, Government of Bihar</div>
+    <h1>Government Industrial Training Institute<br>Madhubani Sadar</h1>
+    <div class="hi-name">राजकीय औद्योगिक प्रशिक्षण संस्थान, मधुबनी सदर</div>
+    <p>NCVT से मान्यता प्राप्त संस्थान, जो युवाओं को उद्योग-केंद्रित ट्रेड प्रशिक्षण, अप्रेंटिसशिप और रोजगार से जुड़े अवसर प्रदान करता है।</p>
+    <div class="hero-ctas">
+      <a href="#trades" class="btn-primary">ट्रेड व अनुदेशक देखें</a>
+      <a href="#contact" class="btn-ghost">संपर्क करें</a>
+    </div>
+  </div>
+  <div class="stat-strip">
+    <div class="wrap">
+      <div class="stat"><div class="n">6</div><div class="l">ट्रेड संचालित</div></div>
+      <div class="stat"><div class="n">2017</div><div class="l">स्थापना वर्ष</div></div>
+      <div class="stat"><div class="n">11</div><div class="l">कुशल अनुदेशक</div></div>
+      <div class="stat"><div class="n">NCVT</div><div class="l">मान्यता प्राप्त</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ TRADES & INSTRUCTORS ============ -->
+<section class="trades" id="trades">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-eyebrow">Trades &amp; Instructors</span>
+      <h2>हमारे ट्रेड और अनुदेशक</h2>
+      <p>संस्थान में संचालित सभी ट्रेड और उनके अनुदेशकों की जानकारी।</p>
+      <span class="edit-note"></span>
+    </div>
+    <div class="trade-grid">
+
+      <div class="trade-card">
+        <div class="trade-head"><div class="tname">Welder</div><div class="tdur">1 वर्ष | NCVT</div></div>
+
+        <div class="staff-row">
+          <div class="avatar">RB<img src="media/instructor-welder.jpg" alt="" onerror="this.style.display='none';"></div>
+          <div class="trade-info">
+            <span class="staff-tag">Trade Instructor</span>
+            <div class="iname">राजा बाबू (Raja Babu)</div>
+            <div class="irole">Welder Instructor &amp; TCAPO</div>
+            <div class="idesc">M.TECH in mechanical engineering</div>
+          </div>
+        </div>
+
+        <div class="trade-projects">
+          <h4>पूर्ण किए गए प्रोजेक्ट्स</h4>
+          <div class="project-strip">
+            <div class="project-item">
+              <div class="pimg">
+                <img src="media/project-welder1.jpg" alt="सजावटी फूल स्टैंड" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="missing">फोटो लगाएं<br>project-welder1.jpg</div>
+              </div>
+              <div class="pcap">सजावटी फूल स्टैंड</div>
+            </div>
+            <div class="project-item">
+              <div class="pimg">
+                <img src="media/project-welder2.jpg" alt="I LOVE WELDER मेटल क्राफ्ट स्टैंड" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="missing">फोटो लगाएं<br>project-welder2.jpg</div>
+              </div>
+              <div class="pcap">I ❤ WELDER मेटल स्टैंड</div>
+            </div>
+            <div class="project-item">
+              <div class="pimg">
+                <img src="media/project-welder3.jpg" alt="[प्रोजेक्ट नाम]" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="missing">फोटो लगाएं<br>project-welder3.jpg</div>
+              </div>
+              <div class="pcap">Power saw</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trade-card">
+        <div class="trade-head"><div class="tname">Fitter</div><div class="tdur">2 वर्ष | NCVT</div></div>
+
+        <div class="staff-row">
+          <div class="avatar">AK<img src="media/instructor-fitter.jpg" alt="" onerror="this.style.display='none';"></div>
+          <div class="trade-info">
+            <span class="staff-tag">Trade Instructor</span>
+            <div class="iname">अविनाश कुमार सिंह (Avinash Kumar Singh)</div>
+            <div class="irole">Fitter Instructor</div>
+            <div class="idesc">Draftsman, CITS</div>
+          </div>
+        </div>
+
+        <div class="trade-projects">
+          <h4>पूर्ण किए गए प्रोजेक्ट्स</h4>
+          <div class="project-strip">
+            <div class="project-item">
+              <div class="pimg">
+                <img src="media/project-fitter1.jpg" alt="[प्रोजेक्ट नाम]" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="missing">फोटो लगाएं<br>project-fitter1.jpg</div>
+              </div>
+              <div class="pcap">Turning</div>
+            </div>
+            <div class="project-item">
+              <div class="pimg">
+                <img src="media/project-fitter2.jpg" alt="[प्रोजेक्ट नाम]" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="missing">फोटो लगाएं<br>project-fitter2.jpg</div>
+              </div>
+              <div class="pcap">Step Turning</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trade-card">
+        <div class="trade-head"><div class="tname">Electrician</div><div class="tdur">2 वर्ष | NCVT</div></div>
+
+        <div class="staff-row">
+          <div class="avatar">NK<img src="media/instructor-electrician1.jpg" alt="" onerror="this.style.display='none';"></div>
+          <div class="trade-info">
+            <span class="staff-tag">Trade Instructor</span>
+            <div class="iname">नीतेश कुमार (Neetesh Kumar)</div>
+            <div class="irole">Electrician Instructor</div>
+            <div class="idesc">Diploma in electrical engineering, CITS</div>
+          </div>
+        </div>
+
+        <div class="staff-row">
+          <div class="avatar">VK<img src="media/instructor-electrician2.jpg" alt="" onerror="this.style.display='none';"></div>
+          <div class="trade-info">
+            <span class="staff-tag">Trade Instructor</span>
+            <div class="iname">विवेक कुमार (Vivek Kumar)</div>
+            <div class="irole">Electrician Instructor</div>
+            <div class="idesc">Electrician,CITS</div>
+          </div>
+        </div>
+
+        <div class="trade-projects">
+          <h4>पूर्ण किए गए प्रोजेक्ट्स</h4>
+          <div class="project-strip">
+            <div class="project-item">
+              <div class="pimg">
+                <img src="media/project-electrician1.jpg" alt="[प्रोजेक्ट नाम]" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="missing">फोटो लगाएं<br>project-electrician1.jpg</div>
+              </div>
+              <div class="pcap">wiring</div>
+            </div>
+            <div class="project-item">
+              <div class="pimg">
+                <img src="media/project-electrician2.jpg" alt="[प्रोजेक्ट नाम]" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="missing">फोटो लगाएं<br>project-electrician2.jpg</div>
+              </div>
+              <div class="pcap">house wiring</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trade-card">
+        <div class="trade-head"><div class="tname">Electronic Mechanic</div><div class="tdur">2 वर्ष | NCVT</div></div>
+
+        <div class="staff-row">
+          <div class="avatar">RB<img src="media/instructor-electronic-mechanic.jpg" alt="" onerror="this.style.display='none';"></div>
+          <div class="trade-info">
+            <span class="staff-tag">Trade Instructor</span>
+            <div class="iname">रविकांत भारती (Ravikant Bharti)</div>
+            <div class="irole">Electronic Mechanic Instructor</div>
+            <div class="idesc">Diploma in Electronics and communication Engineering, CITS</div>
+          </div>
+        </div>
+
+        <div class="trade-projects">
+          <h4>पूर्ण किए गए प्रोजेक्ट्स</h4>
+          <div class="project-strip">
+            <div class="project-item">
+              <div class="pimg">
+                <img src="media/project-electronic-mechanic1.jpg" alt="[प्रोजेक्ट नाम]" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="missing"><br>project-electronic-mechanic1.jpg</div>
+              </div>
+              <div class="pcap">renewable energy</div>
+            </div>
+            <div class="project-item">
+              <div class="pimg">
+                <img src="media/project-electronic-mechanic2.jpg" alt="[प्रोजेक्ट नाम]" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="missing"><br>project-electronic-mechanic2.jpg</div>
+              </div>
+              <div class="pcap">workshop</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trade-card">
+        <div class="trade-head"><div class="tname">Diesel Mechanic</div><div class="tdur">1 वर्ष | NCVT</div></div>
+
+        <div class="staff-row">
+          <div class="avatar">SK<img src="media/instructor-diesel-mechanic1.jpg" alt="" onerror="this.style.display='none';"></div>
+          <div class="trade-info">
+            <span class="staff-tag">Trade Instructor</span>
+            <div class="iname">सुबोध कुमार (Subodh Kumar)</div>
+            <div class="irole">Diesel Mechanic Instructor</div>
+            <div class="idesc">DIESEL MECHANIC</div>
+          </div>
+        </div>
+
+        <div class="staff-row">
+          <div class="avatar">AR<img src="media/instructor-diesel-mechanic2.jpg" alt="" onerror="this.style.display='none';"></div>
+          <div class="trade-info">
+            <span class="staff-tag">Trade Instructor</span>
+            <div class="iname">अभिषेक राज (Abhishek Raj)</div>
+            <div class="irole">Diesel Mechanic Instructor</div>
+            <div class="idesc">B.TECH in mechanical engineering</div>
+          </div>
+        </div>
+
+        <div class="trade-projects">
+          <h4>पूर्ण किए गए प्रोजेक्ट्स</h4>
+          <div class="project-strip">
+            <div class="project-item">
+              <div class="pimg">
+                <img src="media/project-diesel-mechanic1.jpg" alt="[प्रोजेक्ट नाम]" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="missing"><br>project-diesel-mechanic1.jpg</div>
+              </div>
+              <div class="pcap">6 cylinder engine</div>
+            </div>
+            <div class="project-item">
+              <div class="pimg">
+                <img src="media/project-diesel-mechanic2.jpg" alt="[प्रोजेक्ट नाम]" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="missing"><br>project-diesel-mechanic2.jpg</div>
+              </div>
+              <div class="pcap">4 cylinder engine</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trade-card">
+        <div class="trade-head"><div class="tname">ICTSM</div><div class="tdur">2 वर्ष | NCVT</div></div>
+
+        <div class="staff-row">
+          <div class="avatar">SK<img src="media/instructor-ictsm.jpg" alt="" onerror="this.style.display='none';"></div>
+          <div class="trade-info">
+            <span class="staff-tag">Trade Instructor</span>
+            <div class="iname">शांभवी कुमारी (Shambhavi Kumari)</div>
+            <div class="irole">ICTSM Instructor</div>
+            <div class="idesc">M.TECH in computer Science and engineering</div>
+          </div>
+        </div>
+
+        <div class="trade-projects">
+          <h4>पूर्ण किए गए प्रोजेक्ट्स</h4>
+          <div class="project-strip">
+            <div class="project-item">
+              <div class="pimg">
+                <img src="media/project-ictsm1.jpg" alt="[प्रोजेक्ट नाम]" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="missing"><br>project-ictsm1.jpg</div>
+              </div>
+              <div class="pcap">mother board repairing</div>
+            </div>
+            <div class="project-item">
+              <div class="pimg">
+                <img src="media/project-ictsm2.jpg" alt="[प्रोजेक्ट नाम]" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="missing"><br>project-ictsm2.jpg</div>
+              </div>
+              <div class="pcap">system troubleshooting</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ GROUP ANUDESHAK ============ -->
+<section class="group-team" id="group-anudeshak">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-eyebrow">Group Anudeshak</span>
+      <h2>ग्रुप अनुदेशक</h2>
+      <p>संस्थान के समूह अनुदेशकों की जानकारी।</p>
+    </div>
+    <div class="group-grid" style="grid-template-columns:repeat(2,1fr); max-width:520px; margin:0 auto;">
+
+      <div class="group-card">
+        <div class="avatar">MA<img src="media/group-anudeshak1.jpg" alt="" onerror="this.style.display='none';"></div>
+        <div class="gname">मो. अफसर इमाम (Md. Afsar Imam)</div>
+        <div class="grole">Group Anudeshak</div>
+        <div class="gdesc">Diploma in Mechanic engineering</div>
+      </div>
+
+      <div class="group-card">
+        <div class="avatar">NP<img src="media/group-anudeshak2.jpg" alt="" onerror="this.style.display='none';"></div>
+        <div class="gname">नागेन्द्र प्रसाद चौधरी (Nagendra Prasad Choudhary)</div>
+        <div class="grole">Group Anudeshak</div>
+        <div class="gdesc">plumber</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMMON SUBJECT INSTRUCTORS (WCS / ED) ============ -->
+<section class="group-team" id="common-instructors" style="background:var(--paper);">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-eyebrow">Common Subjects</span>
+      <h2>सामान्य विषय अनुदेशक</h2>
+      <p>सभी ट्रेड में पढ़ाए जाने वाले सामान्य विषयों के अनुदेशक — WCS (Workshop Calculation &amp; Science) एवं ED (Engineering Drawing)।</p>
+    </div>
+    <div class="group-grid" style="grid-template-columns:repeat(2,1fr); max-width:520px; margin:0 auto;">
+
+      <div class="group-card">
+        <div class="avatar">RK<img src="media/instructor-wcs.jpg" alt="" onerror="this.style.display='none';"></div>
+        <div class="gname">रंजन कुमार (Ranjan Kumar)</div>
+        <div class="grole">WCS Instructor</div>
+        <div class="gdesc">B.tech in mechanical engineering</div>
+      </div>
+
+      <div class="group-card">
+        <div class="avatar">AK<img src="media/instructor-ed.jpg" alt="" onerror="this.style.display='none';"></div>
+        <div class="gname">अविनाश कुमार सिंह (Avinash Kumar Singh)</div>
+        <div class="grole">ED Instructor</div>
+        <div class="gdesc">Draftsman</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRINCIPAL DESK ============ -->
+<section class="principal" id="principal">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-eyebrow">Principal's Desk</span>
+      <h2>प्राचार्य कक्ष</h2>
+    </div>
+    <div class="principal-inner">
+      <div class="principal-photo">
+        <img src="media/principal.jpg" alt="Principal Photo"
+             onerror="this.style.display='none'; this.parentElement.querySelector('.missing').style.display='flex';">
+        <div class="missing" style="display:none; position:absolute; inset:0; align-items:center; justify-content:center; flex-direction:column; padding:20px; text-align:center;">
+          प्राचार्य की फोटो यहाँ लगाएं<br><span style="font-size:0.72rem; margin-top:6px;">फ़ाइल का नाम: media/principal.jpg</span>
+        </div>
+      </div>
+      <div class="principal-text">
+        <span class="sec-eyebrow">Message from the Principal</span>
+        <h3>SHRI PRABHAT CHANDRA PRAKASH</h3>
+        <div class="role">Principal, Govt. ITI Madhubani Sadar</div>
+        <blockquote>"हमारा प्रयास है कि प्रत्येक प्रशिक्षणार्थी अनुशासन, कौशल और आत्मविश्वास के साथ संस्थान से निकले और उद्योग जगत में अपनी पहचान बनाए।</blockquote>
+        <p><b>About:</b>M.Tech in Automobile engineering, ex INDIAN ARMY</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-eyebrow">Gallery</span>
+      <h2>फोटो व वीडियो गैलरी</h2>
+      <p>संस्थान की गतिविधियों, कार्यशालाओं और कार्यक्रमों की झलक।</p>
+      <span class="edit-note"></span>
+    </div>
+    <div class="gal-tabs">
+      <div class="gal-tab active" data-filter="all">सभी</div>
+      <div class="gal-tab" data-filter="workshop">कार्यशाला</div>
+      <div class="gal-tab" data-filter="event">कार्यक्रम</div>
+      <div class="gal-tab" data-filter="placement">प्लेसमेंट</div>
+      <div class="gal-tab" data-filter="video">वीडियो</div>
+    </div>
+    <div class="gal-grid" id="galGrid">
+
+      <div class="gal-item" data-cat="workshop">
+        <img src="media/workshop1.jpg" alt="वर्कशॉप फोटो 1" onerror="this.style.display='none'; this.parentElement.querySelector('.missing').style.display='flex';">
+        <div class="missing">वर्कशॉप फोटो 1<br><span style="font-size:0.68rem;">media/workshop1.jpg</span></div>
+      </div>
+
+      <div class="gal-item" data-cat="workshop">
+        <img src="media/workshop2.jpg" alt="वर्कशॉप फोटो 2" onerror="this.style.display='none'; this.parentElement.querySelector('.missing').style.display='flex';">
+        <div class="missing">वर्कशॉप फोटो 2<br><span style="font-size:0.68rem;">media/workshop2.jpg</span></div>
+      </div>
+
+      <div class="gal-item video" data-cat="video">
+        <video muted onerror="this.style.display='none'; this.parentElement.querySelector('.missing').style.display='flex';"><source src="media/event1.mp4" type="video/mp4"></video>
+        <div class="missing">कार्यक्रम वीडियो<br><span style="font-size:0.68rem;">media/event1.mp4</span></div>
+        <div class="play-badge">Video</div>
+      </div>
+
+      <div class="gal-item" data-cat="placement">
+        <img src="media/placement1.jpg" alt="प्लेसमेंट फोटो" onerror="this.style.display='none'; this.parentElement.querySelector('.missing').style.display='flex';">
+        <div class="missing">प्लेसमेंट फोटो<br><span style="font-size:0.68rem;">media/placement1.jpg</span></div>
+      </div>
+
+      <div class="gal-item" data-cat="event">
+        <img src="media/campus1.jpg" alt="भवन / परिसर" onerror="this.style.display='none'; this.parentElement.querySelector('.missing').style.display='flex';">
+        <div class="missing">भवन / परिसर<br><span style="font-size:0.68rem;">media/campus1.jpg</span></div>
+      </div>
+
+      <div class="gal-item" data-cat="workshop">
+        <img src="media/workshop3.jpg" alt="प्रशिक्षण सत्र" onerror="this.style.display='none'; this.parentElement.querySelector('.missing').style.display='flex';">
+        <div class="missing">प्रशिक्षण सत्र<br><span style="font-size:0.68rem;">media/workshop3.jpg</span></div>
+      </div>
+
+      <div class="gal-item video" data-cat="video">
+        <video muted onerror="this.style.display='none'; this.parentElement.querySelector('.missing').style.display='flex';"><source src="media/induction1.mp4" type="video/mp4"></video>
+        <div class="missing">इंडक्शन वीडियो<br><span style="font-size:0.68rem;">media/induction1.mp4</span></div>
+        <div class="play-badge">Video</div>
+      </div>
+
+      <div class="gal-item" data-cat="event">
+        <img src="media/event2.jpg" alt="सांस्कृतिक कार्यक्रम" onerror="this.style.display='none'; this.parentElement.querySelector('.missing').style.display='flex';">
+        <div class="missing">सांस्कृतिक कार्यक्रम<br><span style="font-size:0.68rem;">media/event2.jpg</span></div>
+      </div>
+
+    </div>
+    <p class="edit-note" style="display:block; width:fit-content; margin:16px auto 0;">
+    
+    </p>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">&times;</button>
+  <div class="lightbox-inner" id="lightboxInner"></div>
+</div>
+
+<!-- ============ FAQ / JANKARI ============ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-eyebrow">Jankari / FAQ</span>
+      <h2>कार्य से संबंधित जानकारी</h2>
+      <p>कौन-सा कार्य किस अनुदेशक के पास जाएगा, कौन-सा दस्तावेज़ कब बनेगा — पूरी जानकारी नीचे दी गई है।</p>
+    </div>
+
+    <div class="faq-wrap-table">
+      <table class="faq-table">
+        <thead>
+          <tr>
+            <th>कार्य / दस्तावेज़</th>
+            <th>जिम्मेदार अनुदेशक</th>
+            <th>आवश्यक दस्तावेज़</th>
+            <th>बनने में समय</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>NCVT / Marksheet सुधार</td>
+            <td>Abhishek Raj</td>
+            <td>मूल मार्कशीट, आधार कार्ड</td>
+            <td>14 दिन</td>
+          </tr>
+          <tr>
+            <td>Bonafide प्रमाण पत्र</td>
+            <td>Abhishek Raj</td>
+            <td>आधार कार्ड, नामांकन संख्या</td>
+            <td>2 दिन</td>
+          </tr>
+          <tr>
+            <td>Apprenticeship (NAPS) पंजीकरण</td>
+            <td>राजा बाबू (TCAPO)</td>
+            <td>NTC, आधार कार्ड, बैंक पासबुक</td>
+            <td>1 दिन</td>
+          </tr>
+          <tr>
+            <td>Transfer Certificate (TC)</td>
+            <td>Abhishek Raj</td>
+            <td>आवेदन पत्र, शुल्क रसीद</td>
+            <td>2 दिन</td>
+          </tr>
+          <tr>
+            <td>Character Certificate</td>
+            <td>Abhishek Raj</td>
+            <td>आवेदन पत्र</td>
+            <td>2 दिन</td>
+          </tr>
+          <tr>
+            <td>Trade-वार दस्तावेज़ सत्यापन</td>
+            <td>संबंधित ट्रेड अनुदेशक</td>
+            <td>मूल दस्तावेज़</td>
+            <td>1 दिन</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="edit-note" style="display:block; width:fit-content; margin:16px auto 0;"></p>
+
+    <div style="max-width:760px; margin:40px auto 0;">
+      <details class="faq-item">
+        <summary>प्रवेश (Admission) कैसे लें?</summary>
+        <div class="faq-a">BCECE के द्वारा लिया गया एग्जाम एवं ऑनलाइन काउंसलिंग के आधार पर</div>
+      </details>
+      <details class="faq-item">
+        <summary>NAPS Apprenticeship के लिए कैसे आवेदन करें?</summary>
+        <div class="faq-a">TCAPO Cell से संपर्क करे</div>
+      </details>
+      <details class="faq-item">
+        <summary>दस्तावेज़ खो जाने पर क्या करें?</summary>
+        <div class="faq-a">कार्यालय में संपर्क करें एवं आवेदन दें</div>
+      </details>
+      <details class="faq-item">
+        <summary>प्लेसमेंट में सहायता कहाँ से मिलेगी?</summary>
+        <div class="faq-a">प्लेसमेंट सेल / TCAPO Cell  से संपर्क करें</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT / GRIEVANCE ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-eyebrow">Contact &amp; Grievance</span>
+      <h2>संपर्क करें / शिकायत दर्ज करें</h2>
+      <p>किसी भी समस्या या शिकायत के लिए नीचे दिया गया फॉर्म भरें।</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>संस्थान संपर्क</h3>
+        <div class="cline"><b>पता</b> Govt. ITI Madhubani Sadar, Madhubani, Bihar – 847228</div>
+        <div class="cline"><b>फ़ोन</b> NA</div>
+        <div class="cline"><b>ईमेल</b> info.govtitimadhubanisadar@gmail.com</div>
+        <div class="cline"><b>समय</b> सोमवार–शनिवार, 10:00 AM – 5:00 PM</div>
+      </div>
+      <form class="grievance-form" onsubmit="event.preventDefault(); this.querySelector('.form-note').textContent='आपकी शिकायत दर्ज हो गई है। संस्थान जल्द संपर्क करेगा।';">
+        <div class="form-row">
+          <div class="field"><label for="gname">नाम</label><input id="gname" type="text" required placeholder="छात्र का नाम"></div>
+          <div class="field"><label for="gtrade">ट्रेड / रोल नंबर</label><input id="gtrade" type="text" required placeholder="जैसे: Welder / 2024-15"></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="gphone">फ़ोन नंबर</label><input id="gphone" type="tel" required placeholder="10 अंकों का मोबाइल नंबर"></div>
+          <div class="field">
+            <label for="gcat">शिकायत श्रेणी</label>
+            <select id="gcat">
+              <option>दस्तावेज़ / प्रमाण पत्र</option>
+              <option>प्रशिक्षण / कक्षा</option>
+              <option>अप्रेंटिसशिप / प्लेसमेंट</option>
+              <option>हॉस्टल / सुविधा</option>
+              <option>अन्य</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label for="gmsg">शिकायत का विवरण</label><textarea id="gmsg" required placeholder="अपनी समस्या विस्तार से लिखें"></textarea></div>
+        <button class="submit-btn" type="submit">शिकायत दर्ज करें</button>
+        <p class="form-note"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 Govt. ITI Madhubani Sadar — Youth Employment &amp; Skill Development Department, Govt. of Bihar</div>
+    <div>Website designed &amp; maintained by TCAPO Cell</div>
+  </div>
+</footer>
+
+<script>
+  // ----- Gallery filter -----
+  var tabs = document.querySelectorAll('.gal-tab');
+  var items = document.querySelectorAll('#galGrid .gal-item');
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      tabs.forEach(function(t){ t.classList.remove('active'); });
+      tab.classList.add('active');
+      var f = tab.getAttribute('data-filter');
+      items.forEach(function(item){
+        if(f === 'all' || item.getAttribute('data-cat') === f){
+          item.classList.remove('hide');
+        } else {
+          item.classList.add('hide');
+        }
+      });
+    });
+  });
+
+  // ----- Lightbox (click photo/video to view full size) -----
+  var lightbox = document.getElementById('lightbox');
+  var lightboxInner = document.getElementById('lightboxInner');
+  var lightboxClose = document.getElementById('lightboxClose');
+
+  items.forEach(function(item){
+    item.addEventListener('click', function(){
+      var img = item.querySelector('img');
+      var videoEl = item.querySelector('video');
+      lightboxInner.innerHTML = '';
+      if(img && img.complete && img.naturalWidth > 0){
+        var bigImg = document.createElement('img');
+        bigImg.src = img.src;
+        bigImg.alt = img.alt;
+        lightboxInner.appendChild(bigImg);
+        lightbox.classList.add('open');
+      } else if(videoEl && videoEl.querySelector('source') && videoEl.style.display !== 'none'){
+        var bigVideo = document.createElement('video');
+        bigVideo.src = videoEl.querySelector('source').src;
+        bigVideo.controls = true;
+        bigVideo.autoplay = true;
+        lightboxInner.appendChild(bigVideo);
+        lightbox.classList.add('open');
+      }
+      // if neither loaded, do nothing (placeholder text is shown instead)
+    });
+  });
+
+  // ----- Project photos also open in lightbox -----
+  document.querySelectorAll('.project-item').forEach(function(item){
+    item.addEventListener('click', function(){
+      var img = item.querySelector('img');
+      if(img && img.complete && img.naturalWidth > 0){
+        lightboxInner.innerHTML = '';
+        var bigImg = document.createElement('img');
+        bigImg.src = img.src;
+        bigImg.alt = img.alt;
+        lightboxInner.appendChild(bigImg);
+        lightbox.classList.add('open');
+      }
+    });
+  });
+
+  function closeLightbox(){
+    lightbox.classList.remove('open');
+    lightboxInner.innerHTML = '';
+  }
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', function(e){
+    if(e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeLightbox();
+  });
+</script>
+
+</body>
+</html>
